@@ -1,0 +1,43 @@
+@{
+    Layout = "~/Views/Shared/MasterPage.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/Login.css" />
+
+<div class="ems-wrapper">
+
+    <section class="ems-card login-card">
+        <h2>Login</h2>
+        <span class="underline"></span>
+
+        <form method="post" asp-action="Login">
+            <div class="row g-4 mt-4 justify-content-center">
+
+                <div class="col-md-8">
+                    <label>Email</label>
+                    <input type="email"
+                            name="email"
+                           class="form-control"
+                           placeholder="Enter your email"
+                           required />
+                </div>
+
+                <div class="col-md-8">
+                    <label>Password</label>
+                    <input type="password"
+                            name="password"
+                           class="form-control"
+                           placeholder="Enter your password"
+                           required />
+                </div>
+
+            </div>
+            <p class="text-center text-danger mt-2">@ViewBag.loginmessage</p>
+            <div class="text-center mt-5">
+                <button type="submit" class="btn-add px-5">
+                    Login
+                </button>
+            </div>
+        </form>
+    </section>
+</div>
